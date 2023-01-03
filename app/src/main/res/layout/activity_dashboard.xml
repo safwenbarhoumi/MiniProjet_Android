@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+
+
+    <FrameLayout
+        android:id="@+id/flfrag"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="1"/>
+
+
+
+
+
+    <com.github.naz013.smoothbottombar.SmoothBottomBar
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        app:backgroundColor="@color/colorPrimary"
+        app:textColor="@color/a3"
+        app:textSize="14sp"
+        app:iconSize="24dp"
+        app:indicatorColor="#2DFFFFFF"
+        app:indicatorRadius="26dp"
+        app:sideMargins="10dp"
+        app:itemPadding="10dp"
+        app:iconTint="@color/a3"
+        app:iconTintActive="@color/a3"
+        app:cornerRadius="126dp"
+        app:corners="top_left|bottom_right"
+        app:menu="@menu/menu_bottom"
+        android:background="@drawable/radius_button"
+        />
+
+
+
+
+
+
+
+</LinearLayout>

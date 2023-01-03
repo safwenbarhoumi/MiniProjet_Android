@@ -1,0 +1,128 @@
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+    dependencies {
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:2.0'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
+    }
+}
+
+
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+
+
+android {
+    namespace 'tn.esprit.retrofit_trying6'
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "tn.esprit.retrofit_trying6"
+        minSdk 25
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+
+configurations {
+    javadocDeps
+}
+
+
+
+
+dependencies {
+
+    implementation 'com.android.support:appcompat-v7:32.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:2.0.4'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation files('allproject')
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+
+    //RetroFit Dependencies
+    implementation 'com.google.code.gson:gson:2.10'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.10'
+
+//Coroutains"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1' //viewModel scope
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1' //lifecycle scope
+    implementation 'androidx.fragment:fragment-ktx:1.5.4'
+
+//Lifecycle
+    implementation 'androidx.lifecycle:lifecycle-common:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
+//size dp/sp
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+    implementation 'com.intuit.ssp:ssp-android:1.1.0'
+
+    implementation "androidx.preference:preference-ktx:1.2.0"
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+
+    //Custom EditText
+    //implementation 'com.github.rkmobile2519:customedittext:1.0.0'
+    //implementation 'com.libizo:customedittext:1.0.6'
+    //implementation project(':customedittext')
+
+    //Navigation Architecture Component
+    //implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    //implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    //SmoothBottomBar dependency
+    implementation 'com.github.ibrahimsn98:SmoothBottomBar:1.7.9'
+
+    implementation 'com.github.naz013:smooth-bottom-bar:1.0.1'
+
+
+    implementation 'com.google.android.material:material:1.0.0'
+
+
+
+}
+
+
+
+
+
