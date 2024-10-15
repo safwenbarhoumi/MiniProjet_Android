@@ -20,6 +20,6 @@ Welcome to the **Blockchain Learning Hub** mobile application, developed using *
 
 1. **Clone the Repository:**
    ```bash
-   git clone [https://github.com/yourusername/blockchain-learning-hub.git](https://github.com/safwenbarhoumi/MiniProjet_Android
+   git clone https://github.com/safwenbarhoumi/MiniProjet_Android
    ```
    
